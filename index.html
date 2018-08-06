@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <title>MASERATI SKYPIA</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('.scroll').click(function() {
+       $('html,body').animate({ scrollTop:  $('.mid').offset().top },700);
+      });
+      $('#zzzz').click(function() {
+       $('html,body').animate({ scrollTop:  $('#haha').offset().top },700);
+      });
+      $('#haha').click(function() {
+       $('html,body').animate({ scrollTop:  $('.main').offset().top },700);
+      });
+    });
+
+
+    $(document).ready(function(){
+     $('.slide_img').flexslider({
+      animation: "fade",
+
+      slideshowSpeed: 1000,
+      controlNav: true,
+      directionNav: false
+     });
+    });
+  </script>
+    <style>
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+      body{
+        margin:0;
+      }
+      .main{
+        width: 100%;
+        height: 100%;
+        /* position:relative; */
+        /* background-image: url(IMG/main/img01.jpg); */
+        /* background-size: cover; */
+      }
+      .main li{
+        position:absolute;
+        background-size:cover;
+        height:100%;
+        width:100%;
+      }
+      .top{
+        margin-top: 30px;
+        width:100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .mid{
+        height: 100%;
+      }
+      .mid li{
+        height:100%;
+      }
+      .logo{
+        width: 90%;
+        height: 100px;
+        float: left;
+        text-align: center;
+        padding-top: 25px;
+        position: relative;
+      }
+
+      .menu{
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 300;
+        font-size:15px;
+        width: 10%;
+        height:100%;
+      }
+      .menu li{
+        height: 100px;
+        color: white;
+        display: flex;
+        align-items: center;
+      }
+      .scroll{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 870;
+        z-index: 1;
+      }
+      .slide_img li{
+        width: 100%;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body style="overflow-X:hidden;"bgcolor="black">
+    <div class="main">
+      <li style="background-image: url(IMG/main/img01.jpg);"></li>
+      <div class="top">
+        <div class="logo"><a href="index.html"><img style="padding-left:11%" src="IMG/main/logo.png" width=150px title="Maserati Skypia"></a></div>
+        <div class="menu">
+          <ul>
+            <li>LOGIN</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      <div class="scroll"><img src="IMG/main/scrolldown.png" style="cursor:hand;"></div>
+      <div class="mid">
+        <div class="slide_img">
+          <li style="background-image: url(IMG/main/02_01.jpg);"></li>
+          <li style="background-image: url(IMG/main/02_02.jpg);"></li>
+          <li style="background-image: url(IMG/main/02_03.jpg);"></li>
+          <li style="background-image: url(IMG/main/02_04.jpg);"></li>
+          <li style="background-image: url(IMG/main/02_05.jpg);"></li>
+        </div>
+      </div>
+      <div id="haha" style="height:100%;background:yellow;cursor:hand;"></div>
+  </body>
+</html>
